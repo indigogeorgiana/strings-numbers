@@ -1,7 +1,8 @@
 module.exports = {
   getType: getType,
   isNumber: isNumber,
-  toNumber: toNumber
+  toNumber: toNumber,
+  isStringNumber: isStringNumber
 }
 
 function getType (thing) {
@@ -21,9 +22,11 @@ function toNumber (str) {
 }
 
 function isStringNumber (str) {
+  return !isNaN(str)
 }
 
 function add (a, b) {
+
 }
 
 function addStrings (a, b) {
