@@ -71,7 +71,7 @@ function filter (array, fn) {
 function map (array, fn) {
   var endarr = []
   for (var i = 0; i < array.length; i++) {
-    return fn(array[i])
+    endarr.push(fn(array[i]))
   }
   return endarr
 }
@@ -82,5 +82,5 @@ function filterStringsWithCommas (str) {
 }
 
 function splitStringByCommas (str) {
-  for var i = 0; i<
+  return str.split(',')
 }
