@@ -1,10 +1,22 @@
+module.exports = {
+  getType: getType,
+  isNumber: isNumber
+}
+
 function getType (thing) {
+  return typeof thing
 }
 
 function isNumber (thing) {
+  if (typeof thing !== 'number') {
+    return false
+  } else {
+    return true
+  }
 }
 
 function toNumber (str) {
+
 }
 
 function isStringNumber (str) {
@@ -36,4 +48,3 @@ function filterStringsWithCommas (str) {
 
 function splitStringByCommas (str) {
 }
-
