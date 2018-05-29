@@ -7,7 +7,8 @@ module.exports = {
   addStrings: addStrings,
   addStringsOrNumbers: addStringsOrNumbers,
   isEmail: isEmail,
-  countIf: countIf
+  countIf: countIf,
+  filter: filter
 }
 
 function getType (thing) {
@@ -35,7 +36,7 @@ function add (a, b) {
 }
 
 function addStrings (a, b) {
- return (Number(a) + Number(b)).toString()
+  return (Number(a) + Number(b)).toString()
 }
 
 function addStringsOrNumbers (a, b) {
@@ -45,13 +46,13 @@ function addStringsOrNumbers (a, b) {
   } else {
     result = (Number(a) + Number(b)).toString()
   }
-  return result  
+  return result
 }
 
-function isEmail (str) { 
+function isEmail (str) {
   if (str.indexOf('@') !== -1 && str.indexOf('.') !== -1) {
     return true
-  } 
+  }
   return false
 }
 
@@ -66,6 +67,15 @@ function countIf (array, fn) {
 }
 
 function filter (array, fn) {
+  let counter = 0
+  for (let index of array) {
+    for (let letter of index) {
+      if (fn(letter) === true) {
+        counter++
+      }
+    }
+  }
+  return counter
 }
 
 function map (array, fn) {
