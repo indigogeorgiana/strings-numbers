@@ -68,17 +68,16 @@ function countIf (array, fn) {
 
 function filter (array, fn) {
   let counter = 0
-  for (let index of array) {
-    for (let letter of index) {
-      if (fn(letter) === true) {
-        counter++
-      }
+  for (let i = 0; i < array.length; i++) {
+    if (fn(array[i])) {
+      counter++
     }
   }
   return counter
 }
 
 function map (array, fn) {
+
 }
 
 function filterStringsWithCommas (str) {
