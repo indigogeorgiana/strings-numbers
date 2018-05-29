@@ -11,8 +11,8 @@ module.exports = {
   countIf: countIf,
   filter: filter,
   map: map,
-  filterStringsWithCommas: filterStringsWithCommas
-
+  filterStringsWithCommas: filterStringsWithCommas,
+  splitStringByCommas: splitStringByCommas
 }
 
 function getType (thing) {
@@ -90,4 +90,6 @@ function filterStringsWithCommas (str) {
 }
 
 function splitStringByCommas (str) {
+  console.log(str)
+  return str.split(',')
 }
