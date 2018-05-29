@@ -23,4 +23,3 @@ test('countIf can count the objects in an array', () => {
   const actual = countIf(mixedArray, isType('object'))
   expect(actual).toBe(expected)
 })
-
