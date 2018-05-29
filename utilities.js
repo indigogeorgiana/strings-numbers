@@ -7,7 +7,10 @@ module.exports = {
   add: add,
   addStrings: addStrings,
   addStringsOrNumbers: addStringsOrNumbers,
-  isEmail: isEmail
+  isEmail: isEmail,
+  countIf: countIf,
+  filter: filter,
+  map: map
 
 }
 
@@ -54,12 +57,23 @@ function isEmail (str) {
 }
 
 function countIf (array, fn) {
+  let result = 0
+  for (let i = 0; i < array.length; i++) {
+    if (fn(array[i])) {
+      result += 1
+    }
+  }
+  return result
 }
 
 function filter (array, fn) {
+  let result = array.filter(fn)
+  return result
+  
 }
 
 function map (array, fn) {
+
 }
 
 function filterStringsWithCommas (str) {
