@@ -1,6 +1,7 @@
 module.exports = {
   getType: getType,
-  isNumber: isNumber
+  isNumber: isNumber,
+  toNumber: toNumber
 }
 
 function getType (thing) {
@@ -16,13 +17,13 @@ function isNumber (thing) {
 }
 
 function toNumber (str) {
-
+  return Number(str)
 }
 
 function isStringNumber (str) {
 }
 
-function add (a, b) 
+function add (a, b) {
 }
 
 function addStrings (a, b) {
