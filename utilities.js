@@ -1,6 +1,6 @@
-module.exports ={
-  getType:getType,
-  
+module.exports = {
+  getType: getType,
+  isNumber: isNumber
 
 }
 
@@ -9,6 +9,7 @@ function getType (thing) {
 }
 
 function isNumber (thing) {
+  return (Number.isInteger(thing))
 }
 
 function toNumber (str) {
