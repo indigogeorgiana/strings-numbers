@@ -77,7 +77,11 @@ function filter (array, fn) {
 }
 
 function map (array, fn) {
-
+  let newArr = []
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(fn(array[i]))
+  }
+  return newArr
 }
 
 function filterStringsWithCommas (str) {
