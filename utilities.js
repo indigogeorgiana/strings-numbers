@@ -15,6 +15,7 @@ module.exports = {
   splitStringByCommas: splitStringByCommas
 }
 
+
 function getType (thing) {
   return typeof thing
 }
