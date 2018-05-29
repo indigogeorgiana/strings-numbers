@@ -1,6 +1,8 @@
 module.exports = {
   getType: getType,
-  isNumber: isNumber
+  isNumber: isNumber,
+  toNumber: toNumber,
+  toNumberB: toNumberB
 
 }
 
@@ -13,6 +15,11 @@ function isNumber (thing) {
 }
 
 function toNumber (str) {
+  return Number(str)
+}
+
+function toNumberB (str) {
+  return parseFloat(str)
 }
 
 function isStringNumber (str) {
