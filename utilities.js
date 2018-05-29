@@ -3,7 +3,8 @@ module.exports = {
   isNumber: isNumber,
   toNumber: toNumber,
   toNumberB: toNumberB,
-  isStringNumber: isStringNumber
+  isStringNumber: isStringNumber,
+  add: add
 
 }
 
@@ -28,6 +29,7 @@ function isStringNumber (str) {
 }
 
 function add (a, b) {
+  return (a + b)
 }
 
 function addStrings (a, b) {
