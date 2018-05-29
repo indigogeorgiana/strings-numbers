@@ -22,7 +22,7 @@ function toNumber (str) {
 function isStringNumber (str) {
 }
 
-function add (a, b) {
+function add (a, b) 
 }
 
 function addStrings (a, b) {
