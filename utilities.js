@@ -5,7 +5,8 @@ module.exports = {
   toNumberB: toNumberB,
   isStringNumber: isStringNumber,
   add: add,
-  addStrings: addStrings
+  addStrings: addStrings,
+  addStringsOrNumbers: addStringsOrNumbers
 
 }
 
@@ -39,6 +40,11 @@ function addStrings (a, b) {
 }
 
 function addStringsOrNumbers (a, b) {
+  if (Number.isInteger(a) && Number.isInteger(b)) {
+    return a + b
+  } else {
+    return (Number(a) + Number(b)).toString()
+  }
 }
 
 function isEmail (str) {
@@ -58,4 +64,3 @@ function filterStringsWithCommas (str) {
 
 function splitStringByCommas (str) {
 }
-
