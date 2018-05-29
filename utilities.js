@@ -67,9 +67,13 @@ function countIf (array, fn) {
 }
 
 function filter (array, fn) {
-  let result = array.filter(fn)
-  return result
-  
+  let email = []
+  for (let i = 0; i < array.length; i++) {
+    if (fn(array[i])) {
+      email.push(array[i])
+    }
+  }
+  return email
 }
 
 function map (array, fn) {
