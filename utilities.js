@@ -10,7 +10,8 @@ module.exports = {
   isEmail: isEmail,
   countIf: countIf,
   filter: filter,
-  map: map
+  map: map,
+  filterStringsWithCommas: filterStringsWithCommas
 
 }
 
@@ -85,6 +86,7 @@ function map (array, fn) {
 }
 
 function filterStringsWithCommas (str) {
+  return str.indexOf(',') != -1
 }
 
 function splitStringByCommas (str) {
