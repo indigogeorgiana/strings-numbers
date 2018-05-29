@@ -3,7 +3,8 @@ module.exports = {
   isNumber: isNumber,
   toNumber: toNumber,
   isStringNumber: isStringNumber,
-  add: add
+  add: add,
+  addStrings: addStrings
 }
 
 function getType (thing) {
@@ -31,6 +32,8 @@ function add (a, b) {
 }
 
 function addStrings (a, b) {
+  let newAdd = parseInt(a) + parseInt(b)
+  return newAdd.toString()
 }
 
 function addStringsOrNumbers (a, b) {
