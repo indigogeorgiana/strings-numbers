@@ -4,7 +4,8 @@ module.exports = {
   toNumber: toNumber,
   toNumberB: toNumberB,
   isStringNumber: isStringNumber,
-  add: add
+  add: add,
+  addStrings: addStrings
 
 }
 
@@ -33,6 +34,8 @@ function add (a, b) {
 }
 
 function addStrings (a, b) {
+  const result = (Number(a) + Number(b))
+  return result.toString()
 }
 
 function addStringsOrNumbers (a, b) {
