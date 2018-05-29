@@ -69,10 +69,18 @@ function filter (array, fn) {
 }
 
 function map (array, fn) {
+  var endarr = []
+  for (var i = 0; i < array.length; i++) {
+    return fn(array[i])
+  }
+  return endarr
 }
 
 function filterStringsWithCommas (str) {
+  if (str.search(',') === -1) { return false }
+  return true
 }
 
 function splitStringByCommas (str) {
+  for var i = 0; i<
 }
