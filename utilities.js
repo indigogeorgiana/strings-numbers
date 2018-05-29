@@ -2,7 +2,8 @@ module.exports = {
   getType: getType,
   isNumber: isNumber,
   toNumber: toNumber,
-  toNumberB: toNumberB
+  toNumberB: toNumberB,
+  isStringNumber: isStringNumber
 
 }
 
@@ -23,6 +24,7 @@ function toNumberB (str) {
 }
 
 function isStringNumber (str) {
+  return !isNaN(str)
 }
 
 function add (a, b) {
