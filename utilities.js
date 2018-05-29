@@ -24,27 +24,48 @@ function isNumber (thing) {
 }
 
 function toNumber (str) {
+  return parseInt(str)
 }
 
 function isStringNumber (str) {
+  if (isNaN(parseInt(str))) { return false }
+  return true
 }
 
 function add (a, b) {
+  return a + b
 }
 
 function addStrings (a, b) {
+  return ((parseInt(a) + parseInt(b))).toString()
 }
 
 function addStringsOrNumbers (a, b) {
+  if (isNumber(a) && isNumber(b)) { return (parseInt(a) + parseInt(b)) }
+  return ((parseInt(a) + parseInt(b))).toString()
 }
 
 function isEmail (str) {
+  if (str.includes('@') && str.includes('.', -3)) { return true }
+  return false
 }
 
 function countIf (array, fn) {
+  var count = 0
+  for (var i = 0; i < array.length; i++) {
+    if (fn(array[i])) { count++ }
+  }
+  return count
 }
 
 function filter (array, fn) {
+  var endarr = []
+  for (var i = 0; i < array.length; i++) {
+    if (fn(array[i]) === true) {
+      endarr.push(array[i])
+    }
+  }
+  return endarr
 }
 
 function map (array, fn) {
