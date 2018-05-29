@@ -1,4 +1,11 @@
+module.exports ={
+  getType:getType,
+  
+
+}
+
 function getType (thing) {
+  return typeof thing
 }
 
 function isNumber (thing) {
