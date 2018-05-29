@@ -6,7 +6,8 @@ module.exports = {
   isStringNumber: isStringNumber,
   add: add,
   addStrings: addStrings,
-  addStringsOrNumbers: addStringsOrNumbers
+  addStringsOrNumbers: addStringsOrNumbers,
+  isEmail: isEmail
 
 }
 
@@ -48,6 +49,8 @@ function addStringsOrNumbers (a, b) {
 }
 
 function isEmail (str) {
+  const re = /[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}/igm
+  return re.test(String(str).toLowerCase())
 }
 
 function countIf (array, fn) {
