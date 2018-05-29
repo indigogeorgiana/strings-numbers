@@ -1,7 +1,26 @@
+module.exports = {
+  getType: getType,
+  isNumber: isNumber,
+  toNumber: toNumber,
+  isStringNumber: isStringNumber,
+  add: add,
+  addStrings: addStrings,
+  addStringsOrNumbers: addStringsOrNumbers,
+  isEmail: isEmail,
+  countIf: countIf,
+  filter: filter,
+  map: map,
+  filterStringsWithCommas: filterStringsWithCommas,
+  splitStringByCommas: splitStringByCommas
+}
+
 function getType (thing) {
+  return typeof thing
 }
 
 function isNumber (thing) {
+  if (typeof thing === 'number') { return true }
+  return false
 }
 
 function toNumber (str) {
@@ -36,4 +55,3 @@ function filterStringsWithCommas (str) {
 
 function splitStringByCommas (str) {
 }
-
